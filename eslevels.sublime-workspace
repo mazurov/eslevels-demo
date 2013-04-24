@@ -1,0 +1,994 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"new",
+				"newregions"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"chi2_dtf",
+				"chi2_dtf_chib"
+			],
+			[
+				"shel",
+				"shelve"
+			],
+			[
+				"leg",
+				"legenda"
+			],
+			[
+				"ph",
+				"phi3"
+			],
+			[
+				"s",
+				"swme_media_view_settings"
+			],
+			[
+				"fi",
+				"fit_result"
+			],
+			[
+				"m",
+				"mcfit"
+			],
+			[
+				"chi",
+				"chisquare"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"D",
+				"DB"
+			],
+			[
+				"hi",
+				"hists_pt_g"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "component.json",
+			"settings":
+			{
+				"buffer_size": 254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/scope.js",
+			"settings":
+			{
+				"buffer_size": 568,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/eslevels.js",
+			"settings":
+			{
+				"buffer_size": 5412,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/amazurov/live/escope/escope.js",
+			"settings":
+			{
+				"buffer_size": 24022,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2688,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/app.js",
+			"settings":
+			{
+				"buffer_size": 1456,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 309.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"setS",
+				"Set Syntax: Python"
+			],
+			[
+				"set text",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"Set py",
+				"Set Syntax: Python"
+			],
+			[
+				"Set Pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"Set json",
+				"Set Syntax: JSON"
+			],
+			[
+				"SetS",
+				"Set Syntax: Python"
+			],
+			[
+				"Auto",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Linter",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"forma",
+				"Format: Javascript"
+			],
+			[
+				"js",
+				"Format: Javascript"
+			],
+			[
+				"linter",
+				"SublimeLinter: Load-Save Linting"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"prefe",
+				"Preferences: Settings - User"
+			],
+			[
+				"Package Control: E",
+				"Package Control: Enable Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"J",
+				"Join Room"
+			],
+			[
+				"Sublime",
+				"SublimeLinter: Background Linting"
+			],
+			[
+				"Lint",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"unfol",
+				"Code Folding: Unfold All"
+			],
+			[
+				"xml",
+				"Indent XML"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 277.0,
+		"history":
+		[
+			"import PyV8",
+			"view.set_status(\"l\",\"level0\")",
+			"view.add_regions(\"l\",[sublime.Region(21,29)],\"storage.type.js\",\"\", sublime.DRAW_OUTLINED)",
+			"view.set_status(\"l\",\"Level 0\")",
+			"view.set_status(\"l\",\"level0\")",
+			"view.add_regions(\"l\",[sublime.Region(21,29)],\"storage.type.js\",\"cross\", sublime.DRAW_OUTLINED)",
+			"view.add_regions(\"l\",[sublime.Region(21,28)],\"storage.type.js\",\"cross\", sublime.DRAW_OUTLINED)",
+			"view.add_regions(\"l\",[sublime.Region(21,28)],\"storage.type.js\",sublime.DRAW_OUTLINED)",
+			"view.add_regions(\"l\",[sublime.Region(21,28)],\"storage.type.js\",sublime.OUTLINE)",
+			"view.add_regions(\"l\",[sublime.Region(21,28)],\"storage.type.js\".sublime.OUTLINE)",
+			"view.add_regions(\"l\",[sublime.Region(21,28)],\"storage.type.js\")",
+			"view.add_regions(\"l\",[Region(21,28)],\"storage.type.js\")",
+			"view.add_regions(\"l\",sublime.Region(21,28),\"storage.type.js\")",
+			"view.add_regions(\"l\",Region(21,28),\"storage.type.js\")",
+			"view.scope_name(13)",
+			"view.text_point(1,0)",
+			"view.text_point(0,0)",
+			"view.add_regions(\"b1\",[sublime.Region(400,500)], \"\",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b2\",[sublime.Region(410,420)], \"source.python comment.line.number-sign.python\",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b1\",[sublime.Region(400,500)], \"source.python keyword.control.import.python \",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b\",[sublime.Region(400,500)], \"source.python keyword.control.import.python \",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b\",[sublime.Region(410,420)], \"source.python comment.line.number-sign.python\",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b\",[sublime.Region(400,500)], \"source.python keyword.control.import.python \",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python keyword.control.import.python \",\"circle\",sublime.PERSISTENT)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python keyword.control.import.python \",\"circle\",sublime.DRAW_PERSISTENT)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python keyword.control.import.python \",\"circle\",sublime.DRAW_OUTLINED)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python keyword.control.import.python \",\"dot\",sublime.DRAW_OUTLINED)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python comment.line.number-sign.python \",\"dot\",sublime.DRAW_OUTLINED)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python comment.line.number-sign.python \",\"dot\",sublime.DRAW_OULINED)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python comment.line.number-sign.python \",\"dot\",sublime.HIDDEN)",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python comment.line.number-sign.python \",\"dot\")",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python comment.line.number-sign.python \")",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python comment.line.number-sign.python\")",
+			"view.add_regions(\"b\",[sublime.Region(200,300)], \"source.python\")",
+			"view.add_regions(\"b\",[sublime.Region(10,20)], \"source.python\")",
+			"sublime.Region(10,20)",
+			"sublime.Region",
+			"sublime",
+			"sublimetext",
+			"Region",
+			"view.add_regions(\"b\",[(10,20)], \"source.python\")",
+			"view.add_regions(\"b\",[reg], \"source.python\")",
+			"view.add_regions(\"b\",[reg], \"source.python comment\")",
+			"view.add_regions(\"b\",[reg], \"comment\")",
+			"view.add_regions(\"b\",[reg], \"source.python comment.line.number-sign.python\")",
+			"view.add_regions(\"c\",[reg], \"comment.line.number-sign.python\")",
+			"view.add_regions(\"v\",[reg], \"comment.line.number-sign.python\")",
+			"view.add_regions(\"c\",[reg], \"comment.line.number-sign.python\")",
+			"view.add_regions(\"b\",[reg], \"comment.line.number-sign.python\")",
+			"view.add_regions(\"b\",[reg], \"source.python comment.line.number-sign.python\")",
+			"reg",
+			"reg = view.extract_scope(52)",
+			"view.scope_name(52)",
+			"view.text_point(2,1)",
+			"view.scope_name(5)",
+			"view.text_point(0,5)",
+			"reg",
+			"reg = view.extract_scope(151)",
+			"view.text_point(9,5)",
+			"view.scope_name(136)",
+			"reg",
+			"reg = view.extract_scope(136)",
+			"view.text_point(6,12)",
+			"reg = view.extract_scope(64)",
+			"view.add_regions(\"a\",[reg], \"\")",
+			"view.add_regions(\"a\",[reg], \"source.python comment.line.number-sign.python\")",
+			"view.add_regions(\"a\",[reg], \"source.python comment.line.number-sign.python \")",
+			"view.add_regions(\"a\",[reg], \"source.python \")",
+			"view.add_regions",
+			"reg = view.extract_scope(64)",
+			"view.extract_scope(64)",
+			"view.extract_scope(148)",
+			"view.scope_name(148)",
+			"view.text_point(9,2)",
+			"view.scope_name(147)",
+			"view.text_point(9,1)",
+			"view.scope_name(64)",
+			"view.text_point(3,1)",
+			"view.scope_name(64)",
+			"view.text_point(3,1)",
+			"point",
+			"view.scope_name(20)",
+			"view.scope_name(100)",
+			"view.scope_name(1)",
+			"view.scope_name(10)",
+			"view.scope_name(point)",
+			"view.point",
+			"view.settings().get('syntax')",
+			"view.settings().get('syntax').",
+			"view",
+			"0.04163/0.02174",
+			"0.04277/0.01943",
+			"0.03164/0.02174",
+			"0.03264/0.01943",
+			"import pycco",
+			"sublime.activ",
+			"sublime.packages_path()",
+			"sublime.message_dialog(\"test\")",
+			"w =sublime.windows()[0]",
+			"sublime.windows()[0]",
+			"sublime.windows()",
+			"import sublime",
+			"#sublime_plugin.windows()",
+			"sublime_plugin.windows()",
+			"windows()",
+			"a.help()",
+			"a",
+			"a.",
+			"__doc__()",
+			"__doc__",
+			"a",
+			"a = sublime_plugin.TextCommand",
+			"help(sublime_plugin.TextCommand)",
+			"sublime_plugin.TextCommand?",
+			"sublime_plugin.TextCommand",
+			"import sublime_plugin",
+			"sublime_plugin",
+			"TextCommand"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/amazurov/live/eslevels/app/index.html",
+		"/home/amazurov/live/_eslevels/index.html",
+		"/home/amazurov/live/eslevels/app/scripts/main.js",
+		"/home/amazurov/live/eslevels/app/scripts/app.js",
+		"/home/amazurov/live/eslevels/app/scripts/scope.js",
+		"/home/amazurov/live/eslevels/app/styles/main.css",
+		"/home/amazurov/live/eslevels/app/scripts/eslevels.js",
+		"/home/amazurov/live/eslevels/dist/scripts/ef7b251f.main.js",
+		"/home/amazurov/live/eslevels/index.html",
+		"/home/amazurov/live/eslevels/style.css",
+		"/home/amazurov/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings",
+		"/home/amazurov/.config/sublime-text-3/Packages/Emmet/emmet/snippets.json",
+		"/home/amazurov/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+		"/home/amazurov/live/eslevels/app.js",
+		"/home/amazurov/live/eslevels/eslevels.js",
+		"/home/amazurov/live/eslevels/esrefactor.js",
+		"/home/amazurov/test.js",
+		"/home/amazurov/live/eslevels/codemirror/mode/javascript/index.html",
+		"/home/amazurov/live/eslevels/jquery.js",
+		"/home/amazurov/live/eslevels/test.js",
+		"/home/amazurov/live/eslevels/eslevels.sublime-project",
+		"/home/amazurov/live/eslevels/hightlight.js",
+		"/home/amazurov/live/eslevels/node_modules/esrefactor/lib/esrefactor.js",
+		"/home/amazurov/live/eslevels/lib/eslevels.js",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/tuples.ganga",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/fit.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/tuples.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/11_down_reco14_s20r1.mdst.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/11_up_reco14_s20r1.mdst.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/fit.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/chib/selector.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/chib/utils.py",
+		"/home/amazurov/Downloads/18 - 2 - CodeSkulptor (11-22).txt",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/2011_reco14_s20r1_tuples.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/2012_reco14_s20_tuples.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/strip.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/compare.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/compare.json",
+		"/home/amazurov/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/amazurov/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/chib/models.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/strip.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/2011_tuples.json",
+		"/home/amazurov/dev/chib-www/.gitignore",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/data/splot2011.2.db",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/data/u1s_2011_reco14_s20r1.root",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/2011_reco14_s20_tuples.json",
+		"/home/amazurov/Desktop/main.rs",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/12_down_reco14_s20.mdst.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/12_up_reco14_s20.mdst.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/11_Down_Reco14_s20r1.mdst.json",
+		"/afs/cern.ch/user/a/amazurov/bin/blessings.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/srtip.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/checkmc/splot.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/mcplot.py",
+		"/home/amazurov/Desktop/thesis.sh",
+		"/afs/cern.ch/work/a/amazurov/thesis/.gitignore",
+		"/home/amazurov/.gitconfig",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/mcplot.json",
+		"/home/amazurov/.config/sublime-text-3/Packages/Modific/Default (Linux).sublime-keymap",
+		"/home/amazurov/.config/sublime-text-3/Packages/AutoPEP8/sublimeautopep8lib/pep8.py",
+		"/home/amazurov/.config/sublime-text-3/Packages/User/AutoPep8.sublime-settings",
+		"/home/amazurov/.config/sublime-text-3/Packages/AutoPEP8/AutoPep8.sublime-settings",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/test.html",
+		"/home/amazurov/dev/flylatex/configs.js",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/thesis.sublime-project",
+		"/afs/cern.ch/user/a/amazurov/work/cmtuser/Bender_v21r1/Phys/AnalysisPython/Analysis/Models.h",
+		"/afs/cern.ch/user/a/amazurov/work/cmtuser/Bender_v22r4/Phys/AnalysisPython/Analysis/Models.h",
+		"/afs/cern.ch/user/a/amazurov/work/cmtuser/Bender_v22r4/Phys/AnalysisPython/dict/AnalysisPython.xml",
+		"/afs/cern.ch/user/a/amazurov/work/cmtuser/Bender_v22r4/Phys/AnalysisPython/src/Models.cpp",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/error.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/plots/mcalpha/ptups13_a0.png",
+		"/home/amazurov/Desktop/test.php",
+		"/home/amazurov/.config/sublime-text-3/Packages/User/Shell.sublime-snippet",
+		"/home/amazurov/Desktop/landau/Untitled Unititles Document",
+		"/home/amazurov/.config/sublime-text-3/Packages/SideBarEnhancements/~/.config/sublime-text-3/Packages/SideBarEnhancements",
+		"/home/amazurov/.config/sublime-text-3/Packages/SideBarEnhancements/Default (Linux).sublime-keymap",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/mcfit.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/mcfit.py",
+		"/afs/cern.ch/user/a/amazurov/bin/pypaw.ipy",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/mcfit.js",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/fit.toml",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/pypaw.log",
+		"/afs/cern.ch/user/a/amazurov/work/thesis2/strip.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/chib/__init__.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/opt.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis2/fit.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/plots/opts/pt_ups10.svg",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/mc.toml",
+		"/afs/cern.ch/user/a/amazurov/bin/pypawn",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/plots/opts/pt_ups10.png",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/mc_ws_ds.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/toml.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/configs/mc3p.toml",
+		"/home/amazurov/.config/sublime-text-3/Packages/AdvancedNewFile/Default (Linux).sublime-keymap",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/mc_ws_pdf.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/mc_vs_splot.py",
+		"/usr/lib/node_modules/bower/node_modules/tmp/lib/tmp.js",
+		"/home/amazurov/.cache/.fr-ZlYVuo/release_16Jan2013/TwoGaussFit.cu",
+		"/afs/cern.ch/user/a/amazurov/work/thesis0/data_vs_mc.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/splot.py",
+		"/home/amazurov/.config/sublime-text-3/Packages/Floobits/Floobits.sublime-settings",
+		"/home/amazurov/.config/sublime-text-3/Packages/User/Floobits.sublime-settings",
+		"/home/amazurov/.floobits/shared/test.py",
+		"/home/amazurov/.floobits/shared/mazurov/chib/msgs.floobits.log",
+		"/home/amazurov/.floobits/shared/mazurov/chib/README.txt",
+		"/home/amazurov/.floobits/shared/mazurov/chib/test.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/chib/settings.py",
+		"/home/amazurov/.floobits/shared/test.pt",
+		"/home/amazurov/.config/sublime-text-3/Packages/FuzzyFileNav/fuzzy_file_nav.sublime-settings",
+		"/home/amazurov/.config/sublime-text-3/Packages/FuzzyFileNav/multiconf.py",
+		"/home/amazurov/.private",
+		"/home/amazurov/.cache/.fr-xSSOoh/release_16Jan2013/README",
+		"/home/amazurov/.cache/.fr-fQC7bs/trippy-climb-1.0/README.rst",
+		"/home/amazurov/.cache/.fr-D82mjz/skellington-1.9/gamelib/data.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis0/data_vs_mc.sh",
+		"/afs/cern.ch/user/a/amazurov/work/thesis0/chib/settings.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis0/strip.py",
+		"/afs/cern.ch/user/a/amazurov/work/thesis0/output/u1s_strip_u1scut001_u1sfit001.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis/mc.json",
+		"/afs/cern.ch/user/a/amazurov/work/thesis0/configs/u1s_strip.json",
+		"/home/amazurov/.cache/.fr-fRjzpI/skellington-1.9/gamelib/main.py",
+		"/home/amazurov/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/amazurov/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/home/amazurov/.cache/.fr-WXrxcd/supercat-0.5.5/doc/spc.1",
+		"/home/amazurov/.cache/.fr-qKIoFy/supercat-0.5.5/doc/spc.txt",
+		"/home/amazurov/.config/sublime-text-3/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/home/amazurov/bin/t"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/afs/cern.ch/user/a/amazurov/work/thesis2/",
+			"/afs/cern.ch/user/a/amazurov/work/thesis0/",
+			"/afs/cern.ch/user/a/amazurov/work/thesis2/",
+			"/afs/cern.ch/user/a/amazurov/work/thesis/",
+			"/afs/cern.ch/user/a/amazurov/work/thesis/plots"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"catch",
+			"color",
+			"fullyParsed",
+			"parseLine",
+			"background-",
+			"estraverse",
+			"result",
+			"html",
+			"snippets",
+			"parseLine",
+			"traverse",
+			"location",
+			"this.regions[i]",
+			"lookup",
+			"save",
+			"cloud",
+			"'",
+			"LFN:",
+			"'",
+			"LFN:",
+			"ignore",
+			"\"2",
+			"'",
+			"s20",
+			"LFN:",
+			"'",
+			"LFN:",
+			"'",
+			"Ups",
+			"UpsAlg",
+			"vrho2",
+			"LFN:",
+			"ODIN",
+			"'",
+			"colored",
+			"COLOR_SEQ",
+			"ds",
+			"4f",
+			"%.4f",
+			".4",
+			"15",
+			"2p",
+			"prefix + ",
+			"mcfrac",
+			"pdg",
+			"frac",
+			"model",
+			"prefix + ",
+			"FormulaVar",
+			"FormulaVa",
+			"RooConst",
+			"alpha",
+			"generate",
+			"  #",
+			")",
+			"(",
+			"#",
+			"   ",
+			"\\d+, \\d+",
+			" +-",
+			"\\d+, \\d+",
+			" +- ",
+			"\\d+, \\d+",
+			"4903, 171 4022, 141 3131, 121 2491, 104 2052, 91  1558, 76\n0   4846, 167 3951, 168 3122, 120 2486, 103 2046, 89  1551, 76\n0.5 4892, 169 4025, 139 3211, 134 2554, 107 2071, 90  ",
+			"\\d+, \\d+",
+			"(\\d+, \\d+)",
+			"\\d+, \\d+",
+			" +- ",
+			"print",
+			"sigma_frac1p",
+			"model",
+			"Model",
+			"minDLLmu",
+			"lines",
+			"hash",
+			"const RooArgList&",
+			"const RooArgList&  coeffs",
+			"TLegend",
+			"legend",
+			"SetMarkerStyle",
+			"Multi",
+			"_header",
+			"model",
+			"shell",
+			"dict(",
+			"shell",
+			"python",
+			"tisTis",
+			"TisTosMC",
+			"ChibModel",
+			"always_show_minimap",
+			"always_show_minimap ",
+			"map",
+			"print",
+			"svg",
+			"14",
+			"Draw()",
+			"Load",
+			"None",
+			"cut_expression",
+			"XAXIS",
+			"\n",
+			"WITH_SPLOT",
+			"p",
+			"Set",
+			"print",
+			"colors_chib",
+			"colors_chi",
+			"dm",
+			"cuts",
+			"data_cha",
+			"True",
+			"RU",
+			"selector",
+			"fields",
+			"IN",
+			"Data",
+			"REPO_DIRTY_BG",
+			"new_view",
+			"begin_edit",
+			"RooGausian",
+			"s1",
+			"m1",
+			"a.",
+			"a",
+			"GetName",
+			"SetName",
+			"RooArgList"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"",
+			"\"castor:///castor/cern.ch/user/a/amazurov/ganga/2011/2",
+			"\"",
+			"",
+			"\"",
+			"",
+			"\"",
+			"",
+			"\"",
+			"]",
+			"[",
+			"",
+			" ",
+			"[$0],",
+			",",
+			"[$0],",
+			", ",
+			"[$0],",
+			"($0),",
+			"({0}),",
+			", ",
+			"colors_chib"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "component.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								222,
+								222
+							]
+						],
+						"settings":
+						{
+							"sublimelinter": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/scripts/scope.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+							"sublimelinter": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/scripts/eslevels.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4034,
+								4034
+							]
+						],
+						"settings":
+						{
+							"sublimelinter": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2000.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/amazurov/live/escope/escope.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24022,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14539,
+								14539
+							]
+						],
+						"settings":
+						{
+							"sublimelinter": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8910.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1589,
+								1589
+							]
+						],
+						"settings":
+						{
+							"sublimelinter": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/scripts/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"sublimelinter": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/styles/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"sublimelinter": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"output.find_results":
+	{
+		"height": 423.0
+	},
+	"project": "eslevels.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"fit.js",
+				"thesis/configs/fit.json"
+			],
+			[
+				"mode",
+				"thesis/chib/models.py"
+			],
+			[
+				"model",
+				"thesis/chib/models.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/afs/cern.ch/user/a/amazurov/work/thesis/thesis.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
