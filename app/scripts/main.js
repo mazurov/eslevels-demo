@@ -4,13 +4,18 @@ require.config({
         esprima: '../components/esprima/esprima',
         escope: '../components/escope/escope',
         estraverse: '../components/estraverse/estraverse',
-        bootstrap: 'vendor/bootstrap'
+        codemirror: '../components/codemirror/lib/codemirror',
+        'codemirror.javascript': '../components/codemirror/mode/javascript/javascript'
     },
     shim: {
         bootstrap: {
             deps: ['jquery'],
             exports: 'jquery'
-        }
+        },
+        codemirror : {
+            exports: 'CodeMirror'
+        },
+        'codemirror.javascript': ['codemirror']
     }
 });
 

@@ -1,11 +1,10 @@
-/*global define, CodeMirror */
-define(['jquery', 'eslevels'], function($, eslevels) {
+/*global define*/
+define(['jquery', 'eslevels','codemirror','codemirror.javascript'], function($, eslevels, CodeMirror) {
     'use strict';
     var context, editor;
-
     context = new eslevels.Context();
 
-    editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+    editor = new CodeMirror($('#editor')[0], {
         viewportMargin: Infinity,
         lineNumbers: true,
         matchBrackets: true,
@@ -50,6 +49,17 @@ define(['jquery', 'eslevels'], function($, eslevels) {
 
     editor.on('change', colorCode);
     colorCode(editor);
+
+
+
+    $('.btn-group .btn').click(function() {
+        var src = 'examples/'+$(this).data('src')+'.js';
+        $.ajax({
+            url: src,
+            success: function(data) { editor.setValue(data);}
+        });
+    });
+    $('.btn-group .btn:first').click();
     // var code = $("#code").text();
     // var result = context.color();
     // var pos1, pos2, region;

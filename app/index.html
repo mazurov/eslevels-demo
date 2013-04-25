@@ -10,36 +10,35 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/codemirror.css -->
+        <!-- build:css styles/vendors.css -->
         <link rel="stylesheet" href="components/codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="components/bootstrap/bootstrap/css/bootstrap.css">
         <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
+        <!-- build:js scripts/vendor/vendors.js -->
         <script src="components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-        <!-- build:js scripts/vendor/codemirror.js -->
-        <script src="components/codemirror/lib/codemirror.js"></script>
-        <script src="components/codemirror/mode/javascript/javascript.js"></script>
         <!-- endbuild -->
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-<div class="container">
-<div class="flex1">
-<form>
-<textarea id="code" name="code">
-function b() {
-    function c() {
-        var a = 10;
-    }
-}
-</textarea>
-</form>
-</div>
-<div class="flex2">
-<pre id="scope" class="CodeMirror">
-</pre>
-</div>
-</div>
+        <div class="container-fluid">
+        <h1>JavaScript Scope Context Coloring</h1>
+        <div class="row-fluid">
+            <div class="btn-group">
+                <a class="btn" data-src="levels10">10 Levels</a>
+                <a class="btn" data-src="eslevels">Source file</a>
+            </div>
+        </div>
+        <br/>
+        <div class="row-fluid">
+            <div class="span6">
+                <div id="editor"></div>
+            </div>
+        <div class="span6 CodeMirror">
+        <pre id="scope" class="CodeMirror">
+        </pre>
+        </div>
+    </div>
+    </div>
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
