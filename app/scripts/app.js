@@ -5,6 +5,7 @@ define(['jquery', 'eslevels'], function ($, eslevels) {
     context = new eslevels.Context();
     
     editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+        viewportMargin: Infinity,
         lineNumbers: true,
         matchBrackets: true,
         continueComments: 'Enter',
@@ -33,11 +34,12 @@ define(['jquery', 'eslevels'], function ($, eslevels) {
         context.setCode(code);
         var levels = context.color();
         for (var pos=0; pos < code.length; ++pos) {
-            if (pos === levels[curr][1]) {
+            if ((curr < levels.length) && (pos === levels[curr][1])) {
                 result += '<span class="cm-level'+levels[curr][0]+'">';
             }
             result += escape(code[pos]);
-            if (pos === levels[curr][2]) {
+            
+            if ((curr < levels.length) && (pos === levels[curr][2])) {
                 result += '</span>';
                 curr += 1;
             }

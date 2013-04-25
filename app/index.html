@@ -10,7 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/main.css">
         <!-- build:css styles/codemirror.css -->
         <link rel="stylesheet" href="components/codemirror/lib/codemirror.css">
         <!-- endbuild -->
@@ -20,27 +19,24 @@
         <!-- build:js scripts/vendor/codemirror.js -->
         <script src="components/codemirror/lib/codemirror.js"></script>
         <script src="components/codemirror/mode/javascript/javascript.js"></script>
-        <script src="scripts/scope.js"></script>        
         <!-- endbuild -->
-
+        <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
 <div class="container">
 <div class="flex1">
+<form>
 <textarea id="code" name="code">
-d(); function b() {
-    a = 12;
-    b = 10;
-    var a  = 10;
-    var c = function (err1, err2) {
-        var d = 10 + err1+err2;
+function b() {
+    function c() {
+        var a = 10;
     }
-    d();
 }
 </textarea>
+</form>
 </div>
 <div class="flex2">
-<pre id="scope">
+<pre id="scope" class="CodeMirror">
 </pre>
 </div>
 </div>

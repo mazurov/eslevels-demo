@@ -16,18 +16,27 @@ body {
 .flex1 {
   -webkit-flex: 1;
           flex: 1;
-  min-width: 400px;
+  width: 500px;
   margin: 10px;
 }
 .flex2 {
   -webkit-flex: 2;
           flex: 2;
- min-width: 400px;
+ min-width: 500px;
  margin: 10px;
 }
 
 pre {
     margin: 0;
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 /* editor scope levels */

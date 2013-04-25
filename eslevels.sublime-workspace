@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"min",
+				"min-width"
+			],
+			[
 				"back",
 				"background-color"
 			],
@@ -72,7 +76,10 @@
 			}
 		},
 		{
+			"contents": "/*global CodeMirror */\nCodeMirror.defineMode('scope', function (config, modeConfig) {\n    'use strict';\n\n    var nextToken = function(stream, state) {\n        state.pos +=1;\n        var levels = modeConfig.getLevels();\n        stream.skipToEnd();\n        return \"level7\";\n    };\n\n    return {\n        startState: function () {\n            return {\n                pos: 0,\n                //levels array index\n                index: 0\n            };\n        },\n        token: function (stream, state) {\n            return nextToken(stream, state);\n        },\n    };\n});",
 			"file": "app/scripts/scope.js",
+			"file_size": 568,
+			"file_write_time": 130112018910164395,
 			"settings":
 			{
 				"buffer_size": 568,
@@ -83,7 +90,7 @@
 			"file": "app/scripts/eslevels.js",
 			"settings":
 			{
-				"buffer_size": 5412,
+				"buffer_size": 5768,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +106,7 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 2688,
+				"buffer_size": 2409,
 				"line_ending": "Unix"
 			}
 		},
@@ -107,7 +114,7 @@
 			"file": "app/scripts/app.js",
 			"settings":
 			{
-				"buffer_size": 1456,
+				"buffer_size": 1973,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +122,7 @@
 			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 668,
+				"buffer_size": 1040,
 				"line_ending": "Unix"
 			}
 		}
@@ -511,6 +518,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"level()",
+			"console",
 			"catch",
 			"color",
 			"fullyParsed",
@@ -636,9 +645,7 @@
 			"m1",
 			"a.",
 			"a",
-			"GetName",
-			"SetName",
-			"RooArgList"
+			"GetName"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -749,15 +756,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5412,
+						"buffer_size": 5768,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4034,
-								4034
+								4614,
+								4614
 							]
 						],
 						"settings":
@@ -768,7 +775,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2000.0,
+						"translation.y": 2336.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -786,8 +793,8 @@
 						"selection":
 						[
 							[
-								14539,
-								14539
+								5053,
+								5053
 							]
 						],
 						"settings":
@@ -798,7 +805,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8910.0,
+						"translation.y": 1586.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -809,15 +816,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2688,
+						"buffer_size": 2409,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1589,
-								1589
+								1367,
+								1367
 							]
 						],
 						"settings":
@@ -839,19 +846,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1456,
+						"buffer_size": 1973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								28
+								1367,
+								1367
 							]
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
 							"sublimelinter": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
@@ -869,15 +877,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 668,
+						"buffer_size": 1040,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								154,
-								154
+								299,
+								299
 							]
 						],
 						"settings":

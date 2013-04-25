@@ -42,10 +42,13 @@
     var exports = {};
 
     escope.Scope.prototype._cache = null;
-    escope.Scope.prototype._level = -1;
+    escope.Scope.prototype._level = null;
 
    escope.Scope.prototype.level =  function() {
-      if (this._level === -1) {
+     if (this.functionExpressionScope) {
+        return this.upper.level();
+     }
+      if (this._level === null) {
         this._level = 0;
         if (this.upper !== null) {
           this._level = 1 + this.upper.level();
@@ -137,35 +140,22 @@
 
     function addMainScopes(result, scopes) {
       for (var i = 0; i < scopes.length; i++) {
-          // console.log(scopes[i]);
-          result.addRegion([scopes[i].level(), scopes[i].block.range[0],
-            scopes[i].block.range[1]]);
+          if (!scopes[i].functionExpressionScope) {
+            result.addRegion([scopes[i].level(), scopes[i].block.range[0],
+              scopes[i].block.range[1]]);
+          }
       }
     }
-
-  function isDeclaredHere(name, scope) {
-    var vars = scope.variables;
-    for (var i=0; i < vars.length; ++i) {
-      if (vars[i].name === name) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  function findLevel(name, scope) {
-    if (scope === null) {
-      return 0;
-    }
-    if (isDeclaredHere(name, scope)) {
-      return scope.level();
-    }
-    return findLevel(name, scope.upper);
-  }
 
    function addScopeVariables(result, scope) {
-      var refs = scope.references;
+      var refs = scope.references, vars = scope.variables;
       var level, identifier;
+      for(var i=0; i < vars.length; i++) {
+        if ((vars[i].defs.length > 0 ) && (vars[i].defs[0].type === "FunctionName")) {
+            result.addRegion([scope.level(), vars[i].identifiers[0].range[0], vars[i].identifiers[0].range[1]-1]);
+        }
+      }
+      
       for(var i=0; i < refs.length; i++) {
         identifier = refs[i].identifier;
         level = scope.find(identifier.name);
@@ -179,6 +169,7 @@
     Context.prototype.color = function () {
         var result = new RegionSet();
         var scopes = this._scopeManager.scopes;
+        console.log(scopes);
         addMainScopes(result, scopes);
         for (var i = 0; i < scopes.length; i++) {
           addScopeVariables(result, scopes[i]);
