@@ -26,7 +26,7 @@ $> cd eslevels-demo
 
 ```ssh
 $> npm install
-$> bower installl
+$> bower install
 ```
 
 
@@ -38,4 +38,4 @@ $> grunt server
 
 Finally you will see the following page:
 
-![demo](https://raw.github.com/mazurov/eslevels-demo/master/screenshot.gif)
+<img src="https://raw.github.com/mazurov/eslevels-demo/master/screenshot.gif" height="337"/>
