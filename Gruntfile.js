@@ -307,7 +307,7 @@ module.exports = function (grunt) {
                         '<%= yeoman.app %>/components/esprima/esprima.js',
                         '<%= yeoman.app %>/components/estraverse/estraverse.js',
                         '<%= yeoman.app %>/components/escope/escope.js',
-                        '<%= yeoman.app %>/components/esprima/eslevels.js'
+                        '<%= yeoman.app %>/components/eslevels/eslevels.js'
                     ]
                 }
             }
