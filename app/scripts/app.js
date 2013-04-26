@@ -56,7 +56,7 @@ define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], f
             var src = 'examples/'+$(this).data('src')+'.js';
             $.ajax({
                 url: src,
-                dataType: "text",
+                dataType: 'text',
                 success: function(data) {
                     editor.setValue(data);
                 },
