@@ -13,7 +13,7 @@ purpose was to enable scope context coloring in javascript editors
 * Install grunt and bower packages:
 
 ```sh
-$> npm install -g grunt-cli bower
+$> npm install -g grunt-cli bower (with sudo rights)
 ```
 * Clone repository: 
 
