@@ -299,6 +299,18 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/st/estools.min.js': [
+                        '<%= yeoman.app %>/components/esprima/esprima.js',
+                        '<%= yeoman.app %>/components/estraverse/estraverse.js',
+                        '<%= yeoman.app %>/components/escope/escope.js',
+                        '<%= yeoman.app %>/components/esprima/eslevels.js'
+                    ]
+                }
+            }
         }
     });
 
@@ -335,7 +347,7 @@ module.exports = function (grunt) {
         'concat',
         'uglify',
         'copy',
-        'rev',
+        // 'rev',
         'usemin'
     ]);
 

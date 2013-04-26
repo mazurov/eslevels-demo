@@ -1,10 +1,9 @@
 /*global define*/
-define(['jquery', 'eslevels','codemirror','codemirror.javascript'], function($, eslevels, CodeMirror) {
+define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], function($, esprima, eslevels, CodeMirror) {
     'use strict';
     var exports = {};
     exports.run = function() {
-        var context, editor;
-        context = new eslevels.Context();
+        var editor;
 
         editor = new CodeMirror($('#editor')[0], {
             viewportMargin: Infinity,
@@ -33,8 +32,8 @@ define(['jquery', 'eslevels','codemirror','codemirror.javascript'], function($, 
             var code = cm.getValue();
             var result = '';
             var curr = 0;
-            context.setCode(code);
-            var levels = context.color();
+            var ast = esprima.parse(code, {range:true});
+            var levels = eslevels.levels(ast);
             for (var pos = 0; pos < code.length; ++pos) {
                 if ((curr < levels.length) && (pos === levels[curr][1])) {
                     result += '<span class="cm-level' + levels[curr][0] + '">';
@@ -57,7 +56,13 @@ define(['jquery', 'eslevels','codemirror','codemirror.javascript'], function($, 
             var src = 'examples/'+$(this).data('src')+'.js';
             $.ajax({
                 url: src,
-                success: function(data) { editor.setValue(data);}
+                dataType: "text",
+                success: function(data) {
+                    editor.setValue(data);
+                },
+                error: function(req, err, ex) {
+                    console.log(req,    err, ex);
+                }
             });
         });
         $('.btn-group .btn:first').click();

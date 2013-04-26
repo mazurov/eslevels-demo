@@ -8,30 +8,40 @@
 		{
 			"follow_symlinks": true,
 			"path": "/home/amazurov/live/_eslevels"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/amazurov/live/sublime-levels"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/amazurov/.config/sublime-text-3/Packages"
 		}
 	],
-	"settings": {
-		"jshint_options": {
-		    "node": true,
-		    "browser": true,
-		    "es5": true,
-		    "esnext": true,
-		    "bitwise": true,
-		    "camelcase": true,
-		    "curly": true,
-		    "eqeqeq": true,
-		    "immed": true,
-		    "indent": 4,
-		    "latedef": true,
-		    "newcap": true,
-		    "noarg": true,
-		    "quotmark": "single",
-		    "regexp": true,
-		    "undef": true,
-		    "unused": true,
-		    "strict": true,
-		    "trailing": true,
-		    "smarttabs": true
+	"settings":
+	{
+		"jshint_options":
+		{
+			"bitwise": true,
+			"browser": true,
+			"camelcase": true,
+			"curly": true,
+			"eqeqeq": true,
+			"es5": true,
+			"esnext": true,
+			"immed": true,
+			"indent": 4,
+			"latedef": true,
+			"newcap": true,
+			"noarg": true,
+			"node": true,
+			"quotmark": "single",
+			"regexp": true,
+			"smarttabs": true,
+			"strict": true,
+			"trailing": true,
+			"undef": true,
+			"unused": true
 		}
 	}
 }

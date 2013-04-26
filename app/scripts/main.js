@@ -2,8 +2,9 @@ require.config({
     paths: {
         jquery: '../components/jquery/jquery',
         esprima: '../components/esprima/esprima',
-        escope: '../components/escope/escope',
         estraverse: '../components/estraverse/estraverse',
+        escope: '../components/escope/escope',
+        eslevels: '../components/eslevels/eslevels',
         codemirror: '../components/codemirror/lib/codemirror',
         'codemirror.javascript': '../components/codemirror/mode/javascript/javascript'
     },
