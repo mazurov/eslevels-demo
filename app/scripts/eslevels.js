@@ -171,7 +171,6 @@
     Context.prototype.color = function() {
         var result = new RegionSet();
         var scopes = this._scopeManager.scopes;
-        console.log(scopes);
         addMainScopes(result, scopes);
         for (var i = 0; i < scopes.length; i++) {
             addScopeVariables(result, scopes[i]);
