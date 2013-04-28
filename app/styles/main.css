@@ -1,19 +1,42 @@
-pre {
-    margin: 0;
-}
 
 .CodeMirror {
+  font-size: 14px;
+  margin:0px;
+  padding:0px;
   border: 1px solid #eee;
   height: auto;
 }
+
 .CodeMirror-scroll {
   overflow-y: hidden;
   overflow-x: auto;
 }
 
-form { position: relative; }
-.samples { position: relative; top:3px; right:3px; z-index: 5; }
-.editor {display: block;}
+.CodeMirror-linenumber {
+    width: 40px;
+}
+
+#editor-containter {
+    position: relative;
+}
+
+#editor {
+     width:940px;
+}
+
+#colorer {
+    position: absolute;
+    opacity: 0.5;
+    top: 4px;
+    left: 55px;
+    width: 885px;
+    color:transparent;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+    overflow-x: hidden;
+    border: none;
+}
 
 /* editor scope levels */
 .cm-level0 { background-color: #ffffff; } /* white */

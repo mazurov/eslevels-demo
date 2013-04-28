@@ -21,22 +21,20 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
   THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-/*global esprima:true, estraverse:true, escope: true,
- define:true, require:true, exports:true */
+/*global escope: true, define:true, require:true, exports:true */
 (function(root, factory) {
     'use strict';
 
     // Universal Module Definition (UMD) to support AMD, CommonJS/Node.js,
     // Rhino, and plain browser loading.
     if (typeof exports === 'object') {
-        module.exports = factory(
-        require('esprima'), require('estraverse'), require('escope'));
+        module.exports = factory(require('escope'));
     } else if (typeof define === 'function' && define.amd) {
-        define(['esprima', 'estraverse', 'escope'], factory);
+        define(['escope'], factory);
     } else {
-        root.eslevels = factory(esprima, estraverse, escope);
+        root.eslevels = factory(escope);
     }
-}(this, function(esprima, estraverse, escope) {
+}(this, function(escope) {
     'use strict';
     var exports = {};
 
@@ -79,68 +77,116 @@
         return this._cache[name];
     };
 
-    function Context(code) {
-        this._syntax = null;
-        this._scopeManager = null;
-        if (code) {
-            this.setCode(code);
-        }
-    }
+    var Region = function(level, first, last) {
+        this.level = level;
+        this.first = first;
+        this.last = last;
+    };
 
-    Context.prototype.setCode = function(code) {
-        this._syntax = null;
-        this._scopeManager = null;
-        if (typeof code === 'string') {
-            this._syntax = esprima.parse(code, {
-                range: true
-            });
-        } else if (typeof code === 'object' && code.type === 'Program') {
-            if (typeof code.range !== 'object' || code.range.length !== 2) {
-                throw new Error('eslevels: Context only accepts a syntax tree with range information');
+    Region.prototype.list = function() {
+        return [this.level, this.first, this.last];
+    };
+
+    var RegionNode = function(region) {
+        this.region = region;
+        this.next = null;
+    };
+
+    var RegionList = function() {
+        this.root = null;
+    };
+
+    RegionList.prototype.addRegion = function(region) {
+        var curr, prev, firstRegion, midRegion, lastRegion;
+        if (this.root === null) {
+            this.root = new RegionNode(region);
+            return this.root;
+        }
+        curr = this.root;
+        prev = null;
+        while (true) {
+            if (region.first === curr.region.first) {
+                firstRegion = new RegionNode(region);
+                lastRegion = new RegionNode(
+                    new Region(
+                        curr.region.level,
+                        region.last + 1,
+                        curr.region.last
+                    )
+                );
+                break;
             }
-            this._syntax = code;
-        }
-        this._scopeManager = escope.analyze(this._syntax);
-    };
-
-
-    var RegionSet = function() {
-        this.regions = [];
-    };
-
-    RegionSet.prototype.addRegion = function(region) {
-        var newregions = [];
-        var curr;
-        if (this.regions.length === 0) {
-            this.regions.push(region);
-            return this;
-        }
-
-        for (var i = 0; i < this.regions.length; i++) {
-            curr = this.regions[i];
-            if (
-            (region[2] < curr[1]) || (region[1] > curr[2])) {
-                newregions.push(curr);
-            } else {
-                if (curr[1] !== region[1]) {
-                    newregions.push([curr[0], curr[1], region[1] - 1]);
-                }
-                newregions.push(region);
-                if (curr[2] !== region[2]) {
-                    newregions.push([curr[0], region[2] + 1, curr[2]]);
-                }
+            if (region.last === curr.region.last) {
+                firstRegion = new RegionNode(
+                    new Region(
+                        curr.region.level,
+                        curr.region.first,
+                        region.first - 1
+                    )
+                );
+                lastRegion = new RegionNode(region);
+                break;
             }
+            if ((region.first > curr.region.first) &&
+                (region.last < curr.region.last)) {
+                firstRegion = new RegionNode(
+                    new Region(
+                        curr.region.level,
+                        curr.region.first,
+                        region.first - 1
+                    )
+                );
+                midRegion = new RegionNode(region);
+                lastRegion = new RegionNode(
+                    new Region(
+                        curr.region.level,
+                        region.last + 1,
+                        curr.region.last
+                    )
+                );
+                break;
+            }
+            prev = curr;
+            curr = curr.next;
         }
-        this.regions = newregions;
+
+        if (midRegion !== undefined) {
+            firstRegion.next = midRegion;
+            midRegion.next = lastRegion;
+        } else {
+            firstRegion.next = lastRegion;
+        }
+        lastRegion.next = curr.next;
+        if (prev !== null) {
+            prev.next = firstRegion;
+        } else {
+            this.root = firstRegion;
+        }
+        //console.log(this.root);
     };
 
+    RegionList.prototype.list = function() {
+        var result = [];
+        var curr = this.root;
+        while (curr !== null) {
+            result.push(curr.region.list());
+            curr = curr.next;
+        }
+        // console.log(result);
+        return result;
+    };
 
 
     function addMainScopes(result, scopes) {
         for (var i = 0; i < scopes.length; i++) {
             if (!scopes[i].functionExpressionScope) {
-                result.addRegion([scopes[i].level(), scopes[i].block.range[0],
-                scopes[i].block.range[1]]);
+                result.addRegion(
+                    new Region(
+                        scopes[i].level(),
+                        scopes[i].block.range[0],
+                        scopes[i].block.range[1]
+                    )
+                );
             }
         }
     }
@@ -150,10 +196,15 @@
             vars = scope.variables;
         var level, identifier;
         for (var i = 0; i < vars.length; i++) {
-            if ((vars[i].defs.length > 0) && (vars[i].defs[0].type === 'FunctionName')) {
-                result.addRegion([scope.level(),
-                vars[i].identifiers[0].range[0],
-                vars[i].identifiers[0].range[1] - 1]);
+            if ((vars[i].defs.length > 0) &&
+                (vars[i].defs[0].type === 'FunctionName')) {
+                result.addRegion(
+                    new Region(
+                        scope.level(),
+                        vars[i].identifiers[0].range[0],
+                        vars[i].identifiers[0].range[1] - 1
+                    )
+                );
             }
         }
 
@@ -162,23 +213,36 @@
             level = scope.find(identifier.name);
             if (level !== scope.level()) {
                 // console.log(identifier.range);
-                result.addRegion([level, identifier.range[0],
-                identifier.range[1] - 1]);
+                result.addRegion(
+                    new Region(
+                        level,
+                        identifier.range[0],
+                        identifier.range[1] - 1
+                    )
+                );
             }
         }
     }
 
-    Context.prototype.color = function() {
-        var result = new RegionSet();
-        var scopes = this._scopeManager.scopes;
-        console.log(scopes);
+    var getScopes = function(ast) {
+        if (typeof ast === 'object' && ast.type === 'Program') {
+            if (typeof ast.range !== 'object' || ast.range.length !== 2) {
+                throw new Error('eslevels: Context only accepts a syntax tree'+
+                    'with range information');
+            }
+        }
+        return escope.analyze(ast).scopes;
+    };
+
+    exports.levels = function(ast) {
+        var result = new RegionList();
+        var scopes = getScopes(ast);
         addMainScopes(result, scopes);
         for (var i = 0; i < scopes.length; i++) {
             addScopeVariables(result, scopes[i]);
         }
-        return result.regions;
+        return result.list();
     };
 
-    exports.Context = Context;
     return exports;
 }));

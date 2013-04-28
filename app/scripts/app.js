@@ -45,7 +45,7 @@ define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], f
                     curr += 1;
                 }
             }
-            $('#scope').html(result);
+            $('#colorer').html(result);
         };
 
         editor.on('change', colorCode);
@@ -66,6 +66,10 @@ define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], f
             });
         });
         $('.btn-group .btn:first').click();
+        $('.CodeMirror-hscrollbar').scroll(function(){
+            $("#colorer").scrollTop($(this).scrollTop());
+            $("#colorer").scrollLeft($(this).scrollLeft());
+        });
     };
     return exports;
 });
