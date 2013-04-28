@@ -31,11 +31,20 @@
     left: 55px;
     width: 885px;
     color:transparent;
+    overflow-x: hidden;
+    border: none;
+}
+
+#colorer {
     white-space: pre;
     word-break: normal;
     word-wrap: normal;
-    overflow-x: hidden;
-    border: none;
+
+    -moz-tab-size:    4;
+    -o-tab-size:      4;
+    -webkit-tab-size: 4;
+    -ms-tab-size:     4;
+    tab-size:         4;
 }
 
 /* editor scope levels */
