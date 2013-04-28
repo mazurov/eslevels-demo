@@ -67,8 +67,8 @@ define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], f
         });
         $('.btn-group .btn:first').click();
         $('.CodeMirror-hscrollbar').scroll(function(){
-            $("#colorer").scrollTop($(this).scrollTop());
-            $("#colorer").scrollLeft($(this).scrollLeft());
+            $('#colorer').scrollTop($(this).scrollTop());
+            $('#colorer').scrollLeft($(this).scrollLeft());
         });
     };
     return exports;
