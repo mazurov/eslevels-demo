@@ -1,3 +1,5 @@
+:link:  [**Demo page**](http://mazurov.github.io/eslevels-demo)
+
 # EsLevels demo page
 
 This is a simple web application created to show features of
