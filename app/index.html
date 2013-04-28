@@ -21,26 +21,23 @@
     </head>
     <body>
      <a href="https://github.com/mazurov/eslevels-demo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-    <div class="container-fluid">
+    <div class="container">
         <h1>JavaScript Scope Context Coloring</h1>
-        <div class="row-fluid">
+        <div class="row">
             <div class="btn-group">
                 <a class="btn" data-src="monad">Monad</a>
                 <a class="btn" data-src="levels5">5 Levels</a>
                 <a class="btn" data-src="eslevels">Source file</a>
+                <!--<a class="btn" data-src="jquery">JQuery</a>-->
             </div>
         </div>
         <br/>
-        <div class="row-fluid">
-            <div class="span6">
-                <div id="editor"></div>
-            </div>
-            <div class="span6 CodeMirror">
-                <pre id="scope" class="CodeMirror"></pre>
-            </div>
+        <div id="editor-containter" class="row" style="position: relative;">
+            <div id="editor"></div>
+            <pre id="colorer" class="CodeMirror"></pre>
         </div>
-        <div class="row-fluid">
-          <hr/>
+        <br/>
+        <div class="row">
           <a href="https://github.com/mazurov/sublime-levels"><img src="images/sublimetextlogo.png" width="48"> Levels: SublimeText plugin</a>
         </div>
     </div>
