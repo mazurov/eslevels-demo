@@ -1,4 +1,4 @@
-:link:  [**Demo page**](http://mazurov.github.io/eslevels-demo)
+:link:  [**Demo page**](http://mazurov.github.io/eslevels-demo/)
 
 # EsLevels demo page
 
