@@ -1,10 +1,10 @@
-/*global define*/
-define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], function($, esprima, eslevels, CodeMirror) {
+    /*global define*/
+define(['jquery', 'esprima', 'escope', 'eslevels','codemirror','codemirror.javascript'], function($, esprima, escope, eslevels, CodeMirror) {
     'use strict';
     var exports = {};
     exports.run = function() {
         var editor;
-
+        var eslevelsMode = 'full';
         editor = new CodeMirror($('#editor')[0], {
             viewportMargin: Infinity,
             lineNumbers: true,
@@ -32,8 +32,14 @@ define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], f
             var code = cm.getValue();
             var result = '';
             var curr = 0;
-            var ast = esprima.parse(code, {range:true});
-            var levels = eslevels.levels(ast);
+            var ast;
+            try {
+                ast = esprima.parse(code, {range:true});
+            }catch(e) {
+                $('#colorer').html(code);
+                return;
+            }
+            var levels = eslevels.levels(ast, {mode: eslevelsMode});
             for (var pos = 0; pos < code.length; ++pos) {
                 if ((curr < levels.length) && (pos === levels[curr][1])) {
                     result += '<span class="cm-level' + levels[curr][0] + '">';
@@ -70,6 +76,19 @@ define(['jquery', 'esprima', 'eslevels','codemirror','codemirror.javascript'], f
             $('#colorer').scrollTop($(this).scrollTop());
             $('#colorer').scrollLeft($(this).scrollLeft());
         });
+
+        $('#mode-vars').click(function() {
+            if ($(this).prop('checked')) {
+                eslevelsMode = 'mini';
+            } else {
+                eslevelsMode = 'full';
+            }
+            colorCode(editor);
+        });
+
+        $('#esprima-version').text(esprima.version);
+        $('#eslevels-version').text(eslevels.version);
+        $('#escope-version').text(escope.version);
     };
     return exports;
 });
