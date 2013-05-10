@@ -18,7 +18,8 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'app',
-        dist: 'dist'
+        dist: 'dist',
+        ghpages: '../eslevels-ghpages'
     };
 
     grunt.initConfig({
@@ -273,6 +274,16 @@ module.exports = function (grunt) {
                         'examples/*.js'
                     ]
                 }]
+            },
+            ghpages: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.dist %>',
+                    src: ['./**'],
+                    dest: '<%= yeoman.ghpages %>'
+
+                }]
             }
         },
         concurrent: {
@@ -300,18 +311,18 @@ module.exports = function (grunt) {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
         },
-        uglify: {
-            dist: {
-                files: {
-                    '<%= yeoman.dist %>/st/estools.min.js': [
-                        '<%= yeoman.app %>/components/esprima/esprima.js',
-                        '<%= yeoman.app %>/components/estraverse/estraverse.js',
-                        '<%= yeoman.app %>/components/escope/escope.js',
-                        '<%= yeoman.app %>/components/eslevels/eslevels.js'
-                    ]
-                }
-            }
-        }
+        // uglify: {
+        //     dist: {
+        //         files: {
+        //             '<%= yeoman.dist %>/st/estools.min.js': [
+        //                 '<%= yeoman.app %>/components/esprima/esprima.js',
+        //                 '<%= yeoman.app %>/components/estraverse/estraverse.js',
+        //                 '<%= yeoman.app %>/components/escope/escope.js',
+        //                 '<%= yeoman.app %>/components/eslevels/eslevels.js'
+        //             ]
+        //         }
+        //     }
+        // }
     });
 
     grunt.renameTask('regarde', 'watch');
@@ -355,5 +366,9 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'build'
+    ]);
+
+    grunt.registerTask('ghpages', [
+        'copy:ghpages'
     ]);
 };

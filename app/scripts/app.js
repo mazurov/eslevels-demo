@@ -42,7 +42,7 @@ define(['jquery', 'esprima', 'escope', 'eslevels','codemirror','codemirror.javas
             var levels = eslevels.levels(ast, {mode: eslevelsMode});
             for (var pos = 0; pos < code.length; ++pos) {
                 if ((curr < levels.length) && (pos === levels[curr][1])) {
-                    result += '<span class="cm-level' + levels[curr][0] + '">';
+                    result += '<span class="cm-level' + levels[curr][0] + ' cm-'+eslevelsMode+'">';
                 }
                 result += escape(code[pos]);
 

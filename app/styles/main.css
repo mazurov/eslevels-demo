@@ -55,16 +55,26 @@ html,body{
 .cm-level0 { background-color: #ffffff; } /* white */
 .cm-level1 { background-color: #aefab8; } /* green */
 .cm-level2 { background-color: #fafa99; } /* yellow */
-.cm-level3 { background-color: #a9f2ff; } /* blue */
+.cm-level3 { background-color: #d8d8d8; } /* blue */
 .cm-level4 { background-color: #ffc47d; } /* orange*/
 .cm-level5 { background-color: #c9bfff; } /* cyan */
-.cm-level6 { background-color: #f9b5ff; } /* magenta */
-.cm-level7 { background-color: #c7c7c7; } /* gray */
-.cm-level8 { background-color: #893c08; } /* brown */
+.cm-level6 { background-color: #bcee68; } /* magenta */
+.cm-level7 { background-color: #f6d2f7; } /* gray */
+.cm-level8 { background-color: #ededa1; } /* brown */
 .cm-level9 { background-color: #996633; } /* crap-brown */
+
+.cm-mini {
+    text-shadow:  0em 0em #333;
+}
 
 .footer ul {
    list-style-type: none;
+}
+
+
+.legend {
+    text-align: center;
+    opacity: 0.5;
 }
 
 /* Wrapper for page content to push down footer */
