@@ -36,6 +36,9 @@ html,body{
     color:transparent;
     overflow-x: hidden;
     border: none;
+    filter: blur(0.15em);
+    -webkit-filter: blur(0.15em);
+    -moz-filter: blur(0.15em);
 }
 
 #colorer {
@@ -63,9 +66,7 @@ html,body{
 .cm-level8 { background-color: #ededa1; } /* brown */
 .cm-level9 { background-color: #996633; } /* crap-brown */
 
-.cm-mini {
-    text-shadow:  0em 0em #333;
-}
+
 
 .footer ul {
    list-style-type: none;
