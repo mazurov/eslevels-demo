@@ -9,15 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendors.css -->
-        <link rel="stylesheet" href="components/codemirror/lib/codemirror.css">
-        <link rel="stylesheet" href="components/bootstrap.css/css/bootstrap.css">
-        <!-- endbuild -->
-        <!-- build:js scripts/vendor/vendors.js -->
-        <script src="components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
      <a href="https://github.com/mazurov/eslevels-demo"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1040" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -32,16 +24,28 @@
 
          <div class="container">
             <div class="row">
-                <div class="btn-group span8">
+                <div class="btn-group col-md-6">
                     <a class="btn" data-src="monad">Monad</a>
                     <a class="btn" data-src="levels5">5 Levels</a>
                     <a class="btn" data-src="eslevels">Source file</a>
                     <!--<a class="btn" data-src="jquery">JQuery</a>-->
                 </div>
-                <div class="span4">
-                    <label class="checkbox">
+                <div class="col-md-6">
+                    <label class="checkbox-inline">
                         <input type="checkbox" id="mode-vars">Highlight only important constructions
                     </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="es" value="5" checked> ES 5
+                  </label>
+                  <label class="radio-inline">
+                        <input type="radio" name="es" value="6"> ES 6
+                  </label>
+                  <label class="radio-inline">
+                        <input type="radio" name="st" value="script" checked> script
+                  </label>
+                  <label class="radio-inline">
+                        <input type="radio" name="st" value="module"> module
+                  </label>
                 </div>
             </div>
             <br/>
@@ -51,18 +55,18 @@
             </div>
             <br/>
             <div class="row legend">
-                <div class="span1">Levels:</div>
-                <div class="span1 cm-level-1">implicit</div>
-                <div class="span1 cm-level0">global</div>
-                <div class="span1 cm-level1">1</div>
-                <div class="span1 cm-level2">2</div>
-                <div class="span1 cm-level3">3</div>
-                <div class="span1 cm-level4">4</div>
-                <div class="span1 cm-level5">5</div>
-                <div class="span1 cm-level6">6</div>
-                <div class="span1 cm-level7">7</div>
-                <div class="span1 cm-level8">8</div>
-                <div class="span1 cm-level9">9</div>
+                <div class="col-md-1">Levels:</div>
+                <div class="col-md-1 cm-level-1">implicit</div>
+                <div class="col-md-1 cm-level0">global</div>
+                <div class="col-md-1 cm-level1">1</div>
+                <div class="col-md-1 cm-level2">2</div>
+                <div class="col-md-1 cm-level3">3</div>
+                <div class="col-md-1 cm-level4">4</div>
+                <div class="col-md-1 cm-level5">5</div>
+                <div class="col-md-1 cm-level6">6</div>
+                <div class="col-md-1 cm-level7">7</div>
+                <div class="col-md-1 cm-level8">8</div>
+                <div class="col-md-1 cm-level9">9</div>
             </div>
             <br/>
             <div class="row">
@@ -99,7 +103,10 @@
         </script>
 
         <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="components/requirejs/require.js"></script>
+        <script src="bundle.js">
+
+
+        </script>
         <!-- endbuild -->
 </body>
 </html>
