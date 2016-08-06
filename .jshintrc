@@ -1,8 +1,6 @@
 {
     "node": true,
     "browser": true,
-    "es5": true,
-    "esnext": true,
     "bitwise": true,
     "camelcase": true,
     "curly": true,
@@ -18,5 +16,7 @@
     "unused": true,
     "strict": true,
     "trailing": true,
-    "smarttabs": true
+    "smarttabs": true,
+    "esversion": 6
+
 }
