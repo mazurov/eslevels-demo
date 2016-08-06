@@ -3,96 +3,110 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/vendors.css">
-        <script src="scripts/vendor/vendors.js"></script>
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-     <a href="https://github.com/mazurov/eslevels-demo"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1040" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-     <div id="wrap">
-            <div class="navbar navbar-fixed-top">
-              <div class="navbar-inner">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <a href="https://github.com/mazurov/eslevels-demo"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1040" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <div id="wrap">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-inner">
                 <div class="container-fluid">
-                  <a class="brand" href="#">JavaScript Scope Context Coloring</a>
+                    <a class="brand" href="https://plus.google.com/+PaulIrish/posts/XjR4WmSDFAV">JavaScript Scope Context Coloring</a>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="mode-vars">Highlight only important constructions
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            ECMAScript Version:
+                            <label class="radio-inline">
+                                <input type="radio" name="es" value="5" checked>  5
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="es" value="6">  6
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <span data-toggle="tooltip" title="With the latest 6th edition of ECMA-262 (also known as ES2015 or ES6), it is important to distinguish parsing a script vs parsing a module. This is achieved by using the sourceType option (default to 'script')" data-placement="bottom" class="dashed">Source type:</span>
+                            <label class="radio-inline">
+                                <input type="radio" name="st" value="script" checked> script
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="st" value="module"> module
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Choose test file:
+                            <a class="btn" data-src="monad">Monad</a>
+                            <a class="btn" data-src="levels5">5 Levels</a>
+                            <a class="btn" data-src="es6">ECMAScript 6</a>
+                            <a class="btn" data-src="eslevels">Source file</a>
+                            <!--<a class="btn" data-src="jquery">JQuery</a>-->
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-         <div class="container">
-            <div class="row">
-                <div class="btn-group span8">
-                    <a class="btn" data-src="monad">Monad</a>
-                    <a class="btn" data-src="levels5">5 Levels</a>
-                    <a class="btn" data-src="eslevels">Source file</a>
-                    <!--<a class="btn" data-src="jquery">JQuery</a>-->
-                </div>
-                <div class="span4">
-                    <label class="checkbox">
-                        <input type="checkbox" id="mode-vars">Highlight only important constructions
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div id="editor-containter" class="row" style="position: relative">
-                <div id="editor"></div>
-                <pre id="colorer" class="CodeMirror"></pre>
-            </div>
-            <br>
-            <div class="row legend">
-                <div class="span1">Levels:</div>
-                <div class="span1 cm-level-1">implicit</div>
-                <div class="span1 cm-level0">global</div>
-                <div class="span1 cm-level1">1</div>
-                <div class="span1 cm-level2">2</div>
-                <div class="span1 cm-level3">3</div>
-                <div class="span1 cm-level4">4</div>
-                <div class="span1 cm-level5">5</div>
-                <div class="span1 cm-level6">6</div>
-                <div class="span1 cm-level7">7</div>
-                <div class="span1 cm-level8">8</div>
-                <div class="span1 cm-level9">9</div>
-            </div>
-            <br>
-            <div class="row">
-              <a href="https://github.com/mazurov/sublime-levels"><img src="images/sublimetextlogo.png" width="48"> Levels: SublimeText plugin</a>
             </div>
         </div>
-        <div id="push"></div>
+        <div class="container">
+            <br/>
+            <div id="editor-containter" class="row" style="position: relative;">
+                <div id="editor"></div>
+            <pre id="colorer" class="CodeMirror"></pre>
+        </div>
+        <br/>
+        <div class="row legend">
+            <div class="col-md-1">Levels:</div>
+            <div class="col-md-1 cm-level-1">implicit</div>
+            <div class="col-md-1 cm-level0">global</div>
+            <div class="col-md-1 cm-level1">1</div>
+            <div class="col-md-1 cm-level2">2</div>
+            <div class="col-md-1 cm-level3">3</div>
+            <div class="col-md-1 cm-level4">4</div>
+            <div class="col-md-1 cm-level5">5</div>
+            <div class="col-md-1 cm-level6">6</div>
+            <div class="col-md-1 cm-level7">7</div>
+            <div class="col-md-1 cm-level8">8</div>
+            <div class="col-md-1 cm-level9">9</div>
+        </div>
+        <br/>
+        <div class="row">
+            <a href="https://github.com/mazurov/sublime-levels"><img src="images/sublimetextlogo.png" width="48"> Levels: SublimeText plugin (not suport es6, yet)</a>
+        </div>
+    </div>
+    <div id="push"></div>
     </div> <!-- wrap -->
-<footer class="footer">
-    <div class="container">
-          <p> Coded by <a href="https://github.com/mazurov">@mazurov</a></p>
-          <ul class="footer-links">
+    <footer class="footer">
+        <div class="container">
+            <p> Coded by <a href="https://github.com/mazurov">@mazurov</a></p>
+            <ul class="footer-links">
                 <li><a href="https://github.com/ariya/esprima">Esprima parser <span id="esprima-version"></span></a> by <a href="https://github.com/aria">@aria</a></li>
                 <li><a href="https://github.com/Constellation/escope">Escope library  <span id="escope-version"></span></a> by <a href="https://github.com/Constellation">@Constellation</a></li>
                 <li><a href="https://github.com/mazurov/eslevels">Eslevels library <span id="eslevels-version"></span></a> by <a href="https://github.com/mazurov">@mazurov</a></li>
-          </ul>
-    </div>
-</footer>
+            </ul>
+        </div>
+    </footer>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-2260293-10', 'github.io');
+    ga('send', 'pageview');
+    </script>
 
-
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-2260293-10', 'github.io');
-          ga('send', 'pageview');
-        </script>
-
-        <script data-main="scripts/main" src="components/requirejs/require.js"></script>
+    <script src="scripts/bundle.js"></script>
 </body>
 </html>
