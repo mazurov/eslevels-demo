@@ -1,0 +1,113 @@
+html,body{
+    height: 100%;
+}
+
+.CodeMirror {
+  font-size: 14px;
+  margin:0px;
+  padding:0px;
+  border: 1px solid #eee;
+  height: auto;
+}
+
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.CodeMirror-linenumber {
+    width: 40px;
+}
+
+#editor-containter {
+    position: relative;
+}
+
+#editor {
+     width:940px;
+}
+
+#colorer {
+    position: absolute;
+    opacity: 0.5;
+    top: 6px;
+    left: 54px;
+    width: 885px;
+    color:transparent;
+    overflow-x: hidden;
+    border: none;
+    filter: blur(0.15em);
+    -webkit-filter: blur(0.15em);
+    -moz-filter: blur(0.15em);
+}
+
+#colorer {
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+
+    -moz-tab-size:    4;
+    -o-tab-size:      4;
+    -webkit-tab-size: 4;
+    -ms-tab-size:     4;
+    tab-size:         4;
+}
+
+/* editor scope levels */
+.cm-level-1 { background-color: #faadba; } /* Implicit global var */
+.cm-level0 { background-color: #ffffff; } /* white */
+.cm-level1 { background-color: #aefab8; } /* green */
+.cm-level2 { background-color: #fafa99; } /* yellow */
+.cm-level3 { background-color: #d8d8d8; } /* blue */
+.cm-level4 { background-color: #ffc47d; } /* orange*/
+.cm-level5 { background-color: #c9bfff; } /* cyan */
+.cm-level6 { background-color: #bcee68; } /* magenta */
+.cm-level7 { background-color: #f6d2f7; } /* gray */
+.cm-level8 { background-color: #ededa1; } /* brown */
+.cm-level9 { background-color: #996633; } /* crap-brown */
+
+
+
+.footer ul {
+   list-style-type: none;
+}
+
+
+.legend {
+    text-align: center;
+    opacity: 0.5;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -121px;
+}
+
+#wrap > .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+}
+
+/* Set the fixed height of the footer here */
+#push, .footer {
+    height: 100px;
+}
+
+
+.footer {
+    padding-top:20px;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.dashed{
+    position: relative;
+    border-bottom: blue 1px dashed;
+    cursor: hand;
+}
