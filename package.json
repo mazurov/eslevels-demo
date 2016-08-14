@@ -22,6 +22,7 @@
     "bower": "^1.7.9",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.11.0",
     "grunt": "~1.0.1",
     "grunt-bower-requirejs": "~2.0.0",
     "grunt-concurrent": "~2.3.0",
